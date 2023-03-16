@@ -1,0 +1,26 @@
+#debug:
+spring:
+  application:
+    name:
+  redis:
+    host:
+    port:
+    password:
+
+server:
+  port:
+
+chat-gpt:
+  api-key:
+  proxy-host-name:
+  proxy-port:
+  log:
+
+work-wechat:
+  token:
+  corpID:
+  encodingAESKey:
+  corpSecret:
+  agentId:
+
+
