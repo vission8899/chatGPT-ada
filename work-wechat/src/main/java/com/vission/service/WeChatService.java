@@ -5,6 +5,7 @@ import com.vission.model.ReceiveMsg;
 import com.vission.utils.CacheHelper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import me.chanjar.weixin.common.api.WxConsts;
 import me.chanjar.weixin.common.error.WxErrorException;
 import me.chanjar.weixin.common.util.crypto.WxCryptUtil;
 import me.chanjar.weixin.cp.api.WxCpMessageService;
@@ -55,7 +56,7 @@ public class WeChatService {
     public void sendMsg(String msg, String toUser) {
         try {
             WxCpMessage message = context.getBean(WxCpMessage.class);
-//            message.setMsgType();
+            message.setMsgType(WxConsts.KefuMsgType.MARKDOWN);
             message.setContent(msg);
             message.setToUser(toUser);
             wxCpMessageService.send(message);

@@ -5,7 +5,7 @@ import lombok.Data;
 /**
  * @author vission
  * @date 2023/3/7 20:47
- * @description
+ * @description GPT消息
  */
 @Data
 public class GptMessageDto {
